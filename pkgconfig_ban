@@ -1,0 +1,6 @@
+# This file contains pkgconfig build requirements that get picked up
+# but are undesirable. One entry per line, no whitespace.
+libsocialweb-client
+tracker-sparql-0.16
+valadoc-0.38
+zeitgeist-2.0

@@ -1,0 +1,2 @@
+Configure miss: to see if compiler understands -Werror=old-style-definition
+Configure miss: to see if compiler understands -Werror=strict-prototypes
