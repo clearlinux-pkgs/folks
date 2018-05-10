@@ -4,7 +4,7 @@
 #
 Name     : folks
 Version  : 0.11.4
-Release  : 1
+Release  : 2
 URL      : https://download.gnome.org/sources/folks/0.11/folks-0.11.4.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.11/folks-0.11.4.tar.xz
 Summary  : The Folks meta-contacts library
