@@ -4,7 +4,7 @@
 #
 Name     : folks
 Version  : 0.12.1
-Release  : 3
+Release  : 4
 URL      : https://download.gnome.org/sources/folks/0.12/folks-0.12.1.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.12/folks-0.12.1.tar.xz
 Summary  : Library to aggregates people into metacontacts
@@ -97,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556992608
+export SOURCE_DATE_EPOCH=1556997422
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
