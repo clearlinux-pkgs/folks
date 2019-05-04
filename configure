@@ -1,1 +1,1 @@
---enable-libsocialweb-backend=no --disable-telepathy-backend --disable-tracker-backend --disable-eds-backend --disable-ofono-backend --disable-bluez-backend --disable-telepathy-backend --disable-zeitgeist --disable-vala --disable-vapigen --disable-docs
+-Dtelepathy_backend=false

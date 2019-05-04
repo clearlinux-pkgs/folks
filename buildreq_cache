@@ -1,0 +1,7 @@
+0.12.1
+libgee-dev
+pkgconfig(dbus-glib-1)
+pkgconfig(gee-0.8)
+pkgconfig(libebook-1.2)
+pkgconfig(telepathy-glib)
+readline-dev

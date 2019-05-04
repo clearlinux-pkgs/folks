@@ -1,8 +1,13 @@
 libc.so.6
+libebook-1.2.so.19
+libebook-contacts-1.2.so.2
+libedataserver-1.2.so.24
 libgee-0.8.so.2
 libgio-2.0.so.0
 libglib-2.0.so.0
 libgmodule-2.0.so.0
 libgobject-2.0.so.0
-libpthread.so.0
+libm.so.6
+libreadline.so.7
+libtinfow.so.6
 libxml2.so.2
