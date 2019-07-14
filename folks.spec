@@ -4,7 +4,7 @@
 #
 Name     : folks
 Version  : 0.12.1
-Release  : 4
+Release  : 5
 URL      : https://download.gnome.org/sources/folks/0.12/folks-0.12.1.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.12/folks-0.12.1.tar.xz
 Summary  : Library to aggregates people into metacontacts
@@ -18,13 +18,13 @@ Requires: folks-locales = %{version}-%{release}
 BuildRequires : buildreq-gnome
 BuildRequires : buildreq-meson
 BuildRequires : evolution-data-server-data
+BuildRequires : evolution-data-server-dev
 BuildRequires : libgee-dev
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(dbus-glib-1)
 BuildRequires : pkgconfig(gee-0.8)
-BuildRequires : pkgconfig(libebook-1.2)
-BuildRequires : pkgconfig(telepathy-glib)
 BuildRequires : readline-dev
+BuildRequires : vala
 
 %description
 Folks
@@ -57,6 +57,7 @@ Requires: folks-lib = %{version}-%{release}
 Requires: folks-bin = %{version}-%{release}
 Requires: folks-data = %{version}-%{release}
 Provides: folks-devel = %{version}-%{release}
+Requires: folks = %{version}-%{release}
 Requires: folks = %{version}-%{release}
 
 %description dev
@@ -96,8 +97,9 @@ locales components for the folks package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1556997422
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1563145514
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
