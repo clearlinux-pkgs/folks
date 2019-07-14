@@ -4,7 +4,7 @@
 #
 Name     : folks
 Version  : 0.12.1
-Release  : 5
+Release  : 6
 URL      : https://download.gnome.org/sources/folks/0.12/folks-0.12.1.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.12/folks-0.12.1.tar.xz
 Summary  : Library to aggregates people into metacontacts
@@ -23,8 +23,13 @@ BuildRequires : libgee-dev
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(dbus-glib-1)
 BuildRequires : pkgconfig(gee-0.8)
+BuildRequires : pkgconfig(libebook-1.2)
+BuildRequires : pkgconfig(telepathy-glib)
 BuildRequires : readline-dev
 BuildRequires : vala
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 Folks
@@ -98,7 +103,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563145514
+export SOURCE_DATE_EPOCH=1563145974
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
