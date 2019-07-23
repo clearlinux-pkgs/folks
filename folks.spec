@@ -4,10 +4,10 @@
 #
 Name     : folks
 Version  : 0.12.1
-Release  : 6
+Release  : 7
 URL      : https://download.gnome.org/sources/folks/0.12/folks-0.12.1.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.12/folks-0.12.1.tar.xz
-Summary  : Library to aggregates people into metacontacts
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: folks-bin = %{version}-%{release}
@@ -63,7 +63,6 @@ Requires: folks-bin = %{version}-%{release}
 Requires: folks-data = %{version}-%{release}
 Provides: folks-devel = %{version}-%{release}
 Requires: folks = %{version}-%{release}
-Requires: folks = %{version}-%{release}
 
 %description dev
 dev components for the folks package.
@@ -103,15 +102,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563145974
+export SOURCE_DATE_EPOCH=1563899600
 export GCC_IGNORE_WERROR=1
-export AR=gcc-ar
-export RANLIB=gcc-ranlib
-export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --prefix /usr --buildtype=plain -Dtelepathy_backend=false  builddir
 ninja -v -C builddir
 
