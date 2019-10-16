@@ -4,7 +4,7 @@
 #
 Name     : folks
 Version  : 0.13.1
-Release  : 9
+Release  : 10
 URL      : https://download.gnome.org/sources/folks/0.13/folks-0.13.1.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.13/folks-0.13.1.tar.xz
 Summary  : No detailed summary available
