@@ -4,7 +4,7 @@
 #
 Name     : folks
 Version  : 0.13.1
-Release  : 10
+Release  : 11
 URL      : https://download.gnome.org/sources/folks/0.13/folks-0.13.1.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.13/folks-0.13.1.tar.xz
 Summary  : No detailed summary available
@@ -27,6 +27,7 @@ BuildRequires : vala
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
+Patch1: 0001-Given-we-don-t-run-tests-exclude-dbusmock-for-now.patch
 
 %description
 Folks
@@ -93,13 +94,15 @@ locales components for the folks package.
 
 %prep
 %setup -q -n folks-0.13.1
+cd %{_builddir}/folks-0.13.1
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568081169
+export SOURCE_DATE_EPOCH=1579636670
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -110,7 +113,7 @@ ninja -v -C builddir
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/folks
-cp COPYING %{buildroot}/usr/share/package-licenses/folks/COPYING
+cp %{_builddir}/folks-0.13.1/COPYING %{buildroot}/usr/share/package-licenses/folks/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang folks
 
@@ -164,7 +167,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/folks/COPYING
+/usr/share/package-licenses/folks/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 
 %files locales -f folks.lang
 %defattr(-,root,root,-)
