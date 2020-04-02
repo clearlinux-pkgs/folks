@@ -1,1 +1,1 @@
--Dtelepathy_backend=false
+-Dtelepathy_backend=false -Dbluez_backend=false
