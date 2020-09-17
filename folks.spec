@@ -4,7 +4,7 @@
 #
 Name     : folks
 Version  : 0.14.0
-Release  : 12
+Release  : 13
 URL      : https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz
 Summary  : No detailed summary available
@@ -100,11 +100,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585871764
+export SOURCE_DATE_EPOCH=1600317138
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain -Dtelepathy_backend=false -Dbluez_backend=false  builddir
 ninja -v -C builddir
