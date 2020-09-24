@@ -4,7 +4,7 @@
 #
 Name     : folks
 Version  : 0.14.0
-Release  : 13
+Release  : 14
 URL      : https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz
 Summary  : No detailed summary available
