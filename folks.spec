@@ -5,7 +5,7 @@
 #
 Name     : folks
 Version  : 0.15.5
-Release  : 54
+Release  : 55
 URL      : https://download.gnome.org/sources/folks/0.15/folks-0.15.5.tar.xz
 Source0  : https://download.gnome.org/sources/folks/0.15/folks-0.15.5.tar.xz
 Summary  : No detailed summary available
